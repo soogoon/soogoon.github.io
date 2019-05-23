@@ -8,11 +8,11 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 23 May 2019 15:46:50 GMT</pubDate>
+    <pubDate>Thu, 23 May 2019 15:48:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>좋은 깃 로그를 위한 커밋 메시지 규칙</title>
+      <title>보기 좋은 깃 로그를 위한 커밋 메시지 규칙</title>
       <link>http://soogoon.github.io/2019/05/23/git-commit-message-style-guide/</link>
       <guid>http://soogoon.github.io/2019/05/23/git-commit-message-style-guide/</guid>
       <pubDate>Thu, 23 May 2019 10:15:45 GMT</pubDate>
