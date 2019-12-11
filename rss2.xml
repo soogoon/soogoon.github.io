@@ -8,8 +8,29 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 23 May 2019 15:48:02 GMT</pubDate>
+    <pubDate>Wed, 11 Dec 2019 05:50:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>UIView animate 파헤치기</title>
+      <link>http://soogoon.github.io/2019/12/11/explore-uiview-animate/</link>
+      <guid>http://soogoon.github.io/2019/12/11/explore-uiview-animate/</guid>
+      <pubDate>Wed, 11 Dec 2019 05:09:54 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1&gt;iOS의 Animation 🕹&lt;/h1&gt;
+&lt;p&gt;iOS Framework 에서 애니메이션을 구현하는 방법은 여러가지가 있다.&lt;br&gt;
+아래 내용에 해당하는 UIView의  animate, 그리고 궁극적으로 알아야 할 Core Animation을 활
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1>iOS의 Animation 🕹</h1><p>iOS Framework 에서 애니메이션을 구현하는 방법은 여러가지가 있다.<br>아래 내용에 해당하는 UIView의  animate, 그리고 궁극적으로 알아야 할 Core Animation을 활용한 애니메이션 등이 있다.</p><h1>소개합니다😃 UIView.animate🕺</h1><p>iOS4에서 부터 코드 블럭 문법(클로져)이 도입 되면서 추가된 UIView 계층의 애니메이션 함수.<br><code>UIView.animate(withDuration:animations:)</code> 와 그 패밀리 함수들을 사용한다.</p><p>지속 시간, 애니메이션의 옵션(타이밍 함수 등), 완료 핸들러 등을 메소드의 각 인자로 분리하고, 애니메이션의 내용은 클로저(= 코드 블럭) 안에 작성하여 가독성을 높이고, 특히 중첩된(nested) 애니메이션 구조를 알아보기 쉽게 작성할 수 있는 장점이 있으며 가장 널리 쓰이는 애니메이션이다.</p><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="type">UIView</span>.animate(withDuration: <span class="number">1.5</span>) &#123;</span><br><span class="line">  myView.transform = <span class="type">CGAffineTransform</span>.<span class="keyword">init</span>(scaleX: <span class="number">1.2</span>, y: <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>이 API와 관련된 함수들은 아래와 같은 것들이 있다.</p><ul><li><code>+animate(withDuration:animations:)</code> – 기본 타이밍 함수를 이용</li><li><code>+animate(withDuration:animations:completion:)</code> – 완료핸들러를 추가</li><li><code>+animate(withDuration:delay:options:animations:completion:)</code> – 딜레이 및 다른 애니메이션 옵션을 사용할 수 있게 한다.</li><li><code>+animate(withDuration:delay: usingSpringWithDamping:initialSpringVelocity: options:animations:completion:)</code> – 일반적인 곡선 타이밍 함수가 아닌 스프링에 의한 타이밍 함수를 사용하여 애니메이팅하는 함수 (iOS10)</li></ul><h1>animate는 UIView의 어떤 property를 이용할까?</h1><p>여러 뷰 속성에 대한 변경은 애니메이션 할 수 있다.<br>즉, 속성을 변경하면 현재 값에서 시작하여 지정한 새 값으로 끝나는 애니메이션이 생성된다.<br>UIView 클래스의 다음 속성은 애니메이션이 가능하다.</p><ul><li>frame</li><li>bounds</li><li>center</li><li>transform</li><li>alpha</li><li>backgroundColor</li></ul><h1>animate의 parameter</h1><h2>duration: TimeInterval</h2><ul><li>애니메이션의 총 지속 시간(초 단위)</li><li>음수 값 or 0 을 지정하면 변경 내용이 애니메이션 되지 않고 수행 된다.</li></ul><h2>delay: TimeInterval</h2><ul><li>애니메이션을 시작하기 전에 기다리는 시간(초 단위)</li><li>애니메이션을 즉시 시작하려면 값을 0으로 지정하면 된다.</li></ul><h2>usingSpringWithDamping dampingRatio: CGFloat</h2><ul><li>대기 상태에 가까워질 때 스프링 애니메이션의 댐핑 비율</li><li>진동 없이 애니메이션을 부드럽게 감속하려면 1의 값을 사용한다.</li><li>0에 가까운 댐핑 비율을 적용하여 진동을 증가시킬 수 있다.</li></ul><h2>initialSpringVelocity velocity: CGFloat</h2><ul><li>초기 스프링 속도</li><li>애니메이션을 원활하게 시작하려면 이 값을 첨부하기 전과 같이 뷰의 속도에 일치시킨다.</li><li>1의 값은 1초 만에 횡단한 총 애니메이션 거리에 해당한다. 예를 들어, 전체 애니메이션 거리가 200포인트이고 애니메이션의 시작을 100ppt/s의 보기 속도와 일치시키려면 0.5의 값을 사용하면 된다.</li></ul><h2>options: UIView.AnimationOptions = []</h2><ul><li>애니메이션을 수행할 방법을 나타내는 옵션</li><li>참고 → <a href="https://developer.apple.com/documentation/uikit/uiview/animationoptions" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/uiview/animationoptions</a></li><li>timing function<br><img src="https://user-images.githubusercontent.com/19575791/70593977-53494d00-1c22-11ea-93e7-5edb37ff8c16.png" alt="timing-functions"></li></ul><h2>animations: @escaping () -&gt; Void</h2><ul><li>뷰에 커밋할 변경 사항이 포함된 블록 개체</li><li>여기서 뷰 계층에 있는 뷰의 애니메이션 가능한 속성을 프로그래밍 방식으로 변경할 수 있다.</li><li>이 블록은 매개 변수를 사용하지 않으며 반환 값이 없다.</li><li>이 매개 변수는 NULL이어서는 안 된다.</li></ul><h2>completion: ((Bool) -&gt; Void)? = nil</h2><ul><li>애니메이션 시퀀스가 종료될 때 실행할 블록 객체</li><li>이 블록은 반환 값이 없으며 완료 처리기가 호출되기 전에 애니메이션이 실제로 완료되었는지 여부를 나타내는 단일 Bool 인수를 취한다.</li><li>애니메이션의 지속시간이 0일 경우, 이 블록은 다음 실행 루프 사이클의 시작 부분에서 수행된다.</li><li>이 파라미터는 NULL일 수 있다.</li></ul>]]></content:encoded>
+      
+      <comments>http://soogoon.github.io/2019/12/11/explore-uiview-animate/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>보기 좋은 깃 로그를 위한 커밋 메시지 규칙</title>

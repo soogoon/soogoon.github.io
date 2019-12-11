@@ -6,24 +6,25 @@
     
 
     
-    <title>보기 좋은 깃 로그를 위한 커밋 메시지 규칙 | 팬케이크형 인간</title>
+    <title>UIView animate 파헤치기 | 팬케이크형 인간</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="git,commit">
+        <meta name="keywords" content>
     
-    <meta name="description" content="개발자라면 누구나 Git을 사용합니다. 개발자를 지망하는 분들에게도 실력을 떠나 자신의 개발 자취를 남기는 데에는 깃 만한 것이 없죠. 깃을 쓰게 되면 기본적으로 커밋부터 시작하게 됩니다. 커밋과 함께 필수적으로 따라오는 요소가 바로 커밋 메시지입니다. 커밋 메시지는 모든 내용이 깃 로그에 남기 때문에 잘 쓰이는 것이 중요합니다. 그 이유를 들어보면 다음과">
-<meta name="keywords" content="git,commit">
+    <meta name="description" content="iOS의 Animation 🕹 iOS Framework 에서 애니메이션을 구현하는 방법은 여러가지가 있다. 아래 내용에 해당하는 UIView의  animate, 그리고 궁극적으로 알아야 할 Core Animation을 활용한 애니메이션 등이 있다. 소개합니다😃 UIView.animate🕺 iOS4에서 부터 코드 블럭 문법(클로져)이 도입 되면서 추가된">
 <meta property="og:type" content="article">
-<meta property="og:title" content="보기 좋은 깃 로그를 위한 커밋 메시지 규칙">
-<meta property="og:url" content="http://soogoon.github.io/2019/05/23/git-commit-message-style-guide/index.html">
+<meta property="og:title" content="UIView animate 파헤치기">
+<meta property="og:url" content="http://soogoon.github.io/2019/12/11/explore-uiview-animate/index.html">
 <meta property="og:site_name" content="팬케이크형 인간">
-<meta property="og:description" content="개발자라면 누구나 Git을 사용합니다. 개발자를 지망하는 분들에게도 실력을 떠나 자신의 개발 자취를 남기는 데에는 깃 만한 것이 없죠. 깃을 쓰게 되면 기본적으로 커밋부터 시작하게 됩니다. 커밋과 함께 필수적으로 따라오는 요소가 바로 커밋 메시지입니다. 커밋 메시지는 모든 내용이 깃 로그에 남기 때문에 잘 쓰이는 것이 중요합니다. 그 이유를 들어보면 다음과">
+<meta property="og:description" content="iOS의 Animation 🕹 iOS Framework 에서 애니메이션을 구현하는 방법은 여러가지가 있다. 아래 내용에 해당하는 UIView의  animate, 그리고 궁극적으로 알아야 할 Core Animation을 활용한 애니메이션 등이 있다. 소개합니다😃 UIView.animate🕺 iOS4에서 부터 코드 블럭 문법(클로져)이 도입 되면서 추가된">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-23T15:48:02.449Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/19575791/70593977-53494d00-1c22-11ea-93e7-5edb37ff8c16.png">
+<meta property="og:updated_time" content="2019-12-11T05:50:01.185Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="보기 좋은 깃 로그를 위한 커밋 메시지 규칙">
-<meta name="twitter:description" content="개발자라면 누구나 Git을 사용합니다. 개발자를 지망하는 분들에게도 실력을 떠나 자신의 개발 자취를 남기는 데에는 깃 만한 것이 없죠. 깃을 쓰게 되면 기본적으로 커밋부터 시작하게 됩니다. 커밋과 함께 필수적으로 따라오는 요소가 바로 커밋 메시지입니다. 커밋 메시지는 모든 내용이 깃 로그에 남기 때문에 잘 쓰이는 것이 중요합니다. 그 이유를 들어보면 다음과">
+<meta name="twitter:title" content="UIView animate 파헤치기">
+<meta name="twitter:description" content="iOS의 Animation 🕹 iOS Framework 에서 애니메이션을 구현하는 방법은 여러가지가 있다. 아래 내용에 해당하는 UIView의  animate, 그리고 궁극적으로 알아야 할 Core Animation을 활용한 애니메이션 등이 있다. 소개합니다😃 UIView.animate🕺 iOS4에서 부터 코드 블럭 문법(클로져)이 도입 되면서 추가된">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/19575791/70593977-53494d00-1c22-11ea-93e7-5edb37ff8c16.png">
     
 
     
@@ -141,19 +142,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Git/">Git</a>
+    uncategorized
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-git-commit-message-style-guide" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-explore-uiview-animate" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        보기 좋은 깃 로그를 위한 커밋 메시지 규칙
+        UIView animate 파헤치기
         </h1>
     
 
@@ -163,80 +164,97 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/05/23/git-commit-message-style-guide/" class="article-date">
-            <time datetime="2019-05-23T10:15:45.000Z" itemprop="datePublished">2019-05-23</time>
+        <a href="/2019/12/11/explore-uiview-animate/" class="article-date">
+            <time datetime="2019-12-11T05:09:54.000Z" itemprop="datePublished">2019-12-11</time>
         </a>
     </div>
 
 		
 
                 
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/commit/">commit</a>, <a class="tag-link" href="/tags/git/">git</a>
-    </div>
-
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>개발자라면 누구나 Git을 사용합니다. 개발자를 지망하는 분들에게도 실력을 떠나 자신의 개발 자취를 남기는 데에는 깃 만한 것이 없죠. 깃을 쓰게 되면 기본적으로 커밋부터 시작하게 됩니다. 커밋과 함께 필수적으로 따라오는 요소가 바로 커밋 메시지입니다. 커밋 메시지는 모든 내용이 깃 로그에 남기 때문에 잘 쓰이는 것이 중요합니다.</p>
-<p>그 이유를 들어보면 다음과 같습니다.</p>
+            <h1>iOS의 Animation 🕹</h1>
+<p>iOS Framework 에서 애니메이션을 구현하는 방법은 여러가지가 있다.<br>
+아래 내용에 해당하는 UIView의  animate, 그리고 궁극적으로 알아야 할 Core Animation을 활용한 애니메이션 등이 있다.</p>
+<h1>소개합니다😃 UIView.animate🕺</h1>
+<p>iOS4에서 부터 코드 블럭 문법(클로져)이 도입 되면서 추가된 UIView 계층의 애니메이션 함수.<br>
+<code>UIView.animate(withDuration:animations:)</code> 와 그 패밀리 함수들을 사용한다.</p>
+<p>지속 시간, 애니메이션의 옵션(타이밍 함수 등), 완료 핸들러 등을 메소드의 각 인자로 분리하고, 애니메이션의 내용은 클로저(= 코드 블럭) 안에 작성하여 가독성을 높이고, 특히 중첩된(nested) 애니메이션 구조를 알아보기 쉽게 작성할 수 있는 장점이 있으며 가장 널리 쓰이는 애니메이션이다.</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="type">UIView</span>.animate(withDuration: <span class="number">1.5</span>) &#123;</span><br><span class="line">  myView.transform = <span class="type">CGAffineTransform</span>.<span class="keyword">init</span>(scaleX: <span class="number">1.2</span>, y: <span class="number">0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이 API와 관련된 함수들은 아래와 같은 것들이 있다.</p>
 <ul>
-<li>이해하기 쉬운 커밋 로그 가독성</li>
-<li>더 나은 협업과 리뷰 프로세스</li>
-<li>쉬운 코드 유지보수</li>
+<li><code>+animate(withDuration:animations:)</code> – 기본 타이밍 함수를 이용</li>
+<li><code>+animate(withDuration:animations:completion:)</code> – 완료핸들러를 추가</li>
+<li><code>+animate(withDuration:delay:options:animations:completion:)</code> – 딜레이 및 다른 애니메이션 옵션을 사용할 수 있게 한다.</li>
+<li><code>+animate(withDuration:delay: usingSpringWithDamping:initialSpringVelocity: options:animations:completion:)</code> – 일반적인 곡선 타이밍 함수가 아닌 스프링에 의한 타이밍 함수를 사용하여 애니메이팅하는 함수 (iOS10)</li>
 </ul>
-<p>그래서 좋은 커밋 메시지란 무엇인지 아래 참고를 바탕으로 작성해 보았습니다.</p>
-<blockquote>
-<p>참고</p>
+<h1>animate는 UIView의 어떤 property를 이용할까?</h1>
+<p>여러 뷰 속성에 대한 변경은 애니메이션 할 수 있다.<br>
+즉, 속성을 변경하면 현재 값에서 시작하여 지정한 새 값으로 끝나는 애니메이션이 생성된다.<br>
+UIView 클래스의 다음 속성은 애니메이션이 가능하다.</p>
 <ul>
-<li><a href="https://meetup.toast.com/posts/106" target="_blank" rel="noopener">https://meetup.toast.com/posts/106</a></li>
-<li><a href="https://udacity.github.io/git-styleguide/" target="_blank" rel="noopener">https://udacity.github.io/git-styleguide/</a></li>
+<li>frame</li>
+<li>bounds</li>
+<li>center</li>
+<li>transform</li>
+<li>alpha</li>
+<li>backgroundColor</li>
 </ul>
-</blockquote>
-<h1>Message Structure</h1>
-<p>기본적으로 제목(subject), 본문(body), 꼬리말(footer)로 구성되며, 메세지의 type으로 어떤 커밋인지 쉽게 구별합니다.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">type: subject</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line"></span><br><span class="line">footer</span><br></pre></td></tr></table></figure>
-<h2>Type (커밋 타입)</h2>
+<h1>animate의 parameter</h1>
+<h2>duration: TimeInterval</h2>
 <ul>
-<li><strong>feat:</strong> a new feature - 새로운 피쳐 추가</li>
-<li><strong>fix:</strong> a bug fix - 버그 해결</li>
-<li><strong>docs:</strong> changes to documentation - 프로젝트 관련 문서 수정</li>
-<li><strong>style:</strong> formatting, missing semi colons, etc; no code change - 코드 포맷 변경, 세미 콜론 누락, 코드 수정이 없는 경우</li>
-<li><strong>refactor:</strong> refactoring production code - 프로덕션 코드 리팩토링</li>
-<li><strong>test:</strong> adding tests, refactoring test; no production code change - 테스트 추가, 리팩토링 (프로덕션 코드 변경 없음)</li>
-<li><strong>chore:</strong> updating build tasks, package manager configs, etc; no production code change - 빌드 테스크 업데이트, 패키지 매니저 설정 (프로덕션 코드 변경 없음)</li>
+<li>애니메이션의 총 지속 시간(초 단위)</li>
+<li>음수 값 or 0 을 지정하면 변경 내용이 애니메이션 되지 않고 수행 된다.</li>
 </ul>
-<h2>Subject (제목)</h2>
+<h2>delay: TimeInterval</h2>
 <ul>
-<li>제목과 본문을 한 줄을 띄워 분리</li>
-<li>영문 기준 50자를 넘기지 말 것</li>
-<li>첫 글자는 대문자로 시작</li>
-<li>끝에 . (마침표) 금지</li>
-<li>명령조로 작성</li>
+<li>애니메이션을 시작하기 전에 기다리는 시간(초 단위)</li>
+<li>애니메이션을 즉시 시작하려면 값을 0으로 지정하면 된다.</li>
 </ul>
-<h2>Body (본문)</h2>
+<h2>usingSpringWithDamping dampingRatio: CGFloat</h2>
 <ul>
-<li>선택 사항이므로 모든 커밋에 꼭 작성할 필요는 없음</li>
-<li>어떻게 보다 무엇을, 왜 에 초점을 맞춰 작성할 것</li>
-<li>영문 기준 72자마다 줄 바꿈</li>
+<li>대기 상태에 가까워질 때 스프링 애니메이션의 댐핑 비율</li>
+<li>진동 없이 애니메이션을 부드럽게 감속하려면 1의 값을 사용한다.</li>
+<li>0에 가까운 댐핑 비율을 적용하여 진동을 증가시킬 수 있다.</li>
 </ul>
-<h2>Footer (꼬리말)</h2>
+<h2>initialSpringVelocity velocity: CGFloat</h2>
 <ul>
-<li>선택 사항</li>
-<li>Issue tracking ID 를 작성할 때 사용</li>
+<li>초기 스프링 속도</li>
+<li>애니메이션을 원활하게 시작하려면 이 값을 첨부하기 전과 같이 뷰의 속도에 일치시킨다.</li>
+<li>1의 값은 1초 만에 횡단한 총 애니메이션 거리에 해당한다. 예를 들어, 전체 애니메이션 거리가 200포인트이고 애니메이션의 시작을 100ppt/s의 보기 속도와 일치시키려면 0.5의 값을 사용하면 된다.</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Resolves: #123</span><br><span class="line">See also: #456, #789</span><br></pre></td></tr></table></figure>
-<h1>Message Example</h1>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">feat: Summarize changes in around 50 characters or less</span><br><span class="line"></span><br><span class="line">More detailed explanatory text, if necessary. Wrap it to about 72</span><br><span class="line">characters or so. In some contexts, the first line is treated as the</span><br><span class="line">subject of the commit and the rest of the text as the body. The</span><br><span class="line">blank line separating the summary from the body is critical (unless</span><br><span class="line">you omit the body entirely); various tools like <span class="code">`log`</span>, <span class="code">`shortlog`</span></span><br><span class="line">and <span class="code">`rebase`</span> can get confused if you run the two together.</span><br><span class="line"></span><br><span class="line">Explain the problem that this commit is solving. Focus on why you</span><br><span class="line">are making this change as opposed to how (the code explains that).</span><br><span class="line">Are there side effects or other unintuitive consequenses of this</span><br><span class="line">change? Here's the place to explain them.</span><br><span class="line"></span><br><span class="line">Further paragraphs come after blank lines.</span><br><span class="line"></span><br><span class="line">  - Bullet points are okay, too</span><br><span class="line"></span><br><span class="line">  - Typically a hyphen or asterisk is used for the bullet, preceded</span><br><span class="line"><span class="code">    by a single space, with blank lines in between, but conventions</span></span><br><span class="line"><span class="code">    vary here</span></span><br><span class="line"></span><br><span class="line">If you use an issue tracker, put references to them at the bottom,</span><br><span class="line">like this:</span><br><span class="line"></span><br><span class="line">Resolves: #123</span><br><span class="line">See also: #456, #789</span><br></pre></td></tr></table></figure>
+<h2>options: UIView.AnimationOptions = []</h2>
+<ul>
+<li>애니메이션을 수행할 방법을 나타내는 옵션</li>
+<li>참고 → <a href="https://developer.apple.com/documentation/uikit/uiview/animationoptions" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/uiview/animationoptions</a></li>
+<li>timing function<br>
+<img src="https://user-images.githubusercontent.com/19575791/70593977-53494d00-1c22-11ea-93e7-5edb37ff8c16.png" alt="timing-functions"></li>
+</ul>
+<h2>animations: @escaping () -&gt; Void</h2>
+<ul>
+<li>뷰에 커밋할 변경 사항이 포함된 블록 개체</li>
+<li>여기서 뷰 계층에 있는 뷰의 애니메이션 가능한 속성을 프로그래밍 방식으로 변경할 수 있다.</li>
+<li>이 블록은 매개 변수를 사용하지 않으며 반환 값이 없다.</li>
+<li>이 매개 변수는 NULL이어서는 안 된다.</li>
+</ul>
+<h2>completion: ((Bool) -&gt; Void)? = nil</h2>
+<ul>
+<li>애니메이션 시퀀스가 종료될 때 실행할 블록 객체</li>
+<li>이 블록은 반환 값이 없으며 완료 처리기가 호출되기 전에 애니메이션이 실제로 완료되었는지 여부를 나타내는 단일 Bool 인수를 취한다.</li>
+<li>애니메이션의 지속시간이 0일 경우, 이 블록은 다음 실행 루프 사이클의 시작 부분에서 수행된다.</li>
+<li>이 파라미터는 NULL일 수 있다.</li>
+</ul>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://soogoon.github.io/2019/05/23/git-commit-message-style-guide/" data-id="ck40vjy0r0000a6zpt6e1i9b6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://soogoon.github.io/2019/12/11/explore-uiview-animate/" data-id="ck40vjy0x0002a6zpwpf4epfw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -306,17 +324,20 @@
             "@type": "Person",
             "name": "Seungsoo Lee"
         },
-        "headline": "보기 좋은 깃 로그를 위한 커밋 메시지 규칙",
-        "image": "http://soogoon.github.io",
-        "keywords": "git commit",
-        "genre": "Git",
-        "datePublished": "2019-05-23",
-        "dateCreated": "2019-05-23",
-        "dateModified": "2019-05-24",
-        "url": "http://soogoon.github.io/2019/05/23/git-commit-message-style-guide/",
-        "description": "개발자라면 누구나 Git을 사용합니다. 개발자를 지망하는 분들에게도 실력을 떠나 자신의 개발 자취를 남기는 데에는 깃 만한 것이 없죠. 깃을 쓰게 되면 기본적으로 커밋부터 시작하게 됩니다. 커밋과 함께 필수적으로 따라오는 요소가 바로 커밋 메시지입니다. 커밋 메시지는 모든 내용이 깃 로그에 남기 때문에 잘 쓰이는 것이 중요합니다.
-그 이유를 들어보면 다음과"
-        "wordCount": 435
+        "headline": "UIView animate 파헤치기",
+        "image": "http://soogoon.github.iohttps://user-images.githubusercontent.com/19575791/70593977-53494d00-1c22-11ea-93e7-5edb37ff8c16.png",
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2019-12-11",
+        "dateCreated": "2019-12-11",
+        "dateModified": "2019-12-11",
+        "url": "http://soogoon.github.io/2019/12/11/explore-uiview-animate/",
+        "description": "iOS의 Animation 🕹
+iOS Framework 에서 애니메이션을 구현하는 방법은 여러가지가 있다.
+아래 내용에 해당하는 UIView의  animate, 그리고 궁극적으로 알아야 할 Core Animation을 활용한 애니메이션 등이 있다.
+소개합니다😃 UIView.animate🕺
+iOS4에서 부터 코드 블럭 문법(클로져)이 도입 되면서 추가된"
+        "wordCount": 349
     }
 </script>
 
@@ -364,16 +385,12 @@
         
 <nav id="article-nav">
     
-        <a href="/2019/12/11/explore-uiview-animate/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            UIView animate 파헤치기
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
+        <a href="/2019/05/23/git-commit-message-style-guide/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">보기 좋은 깃 로그를 위한 커밋 메시지 규칙</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -448,7 +465,7 @@
     var disqus_shortname = 'web1-mfpqcygyic';
     
     
-    var disqus_url = 'http://soogoon.github.io/2019/05/23/git-commit-message-style-guide/';
+    var disqus_url = 'http://soogoon.github.io/2019/12/11/explore-uiview-animate/';
     
     (function() {
     var dsq = document.createElement('script');
